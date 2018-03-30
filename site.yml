@@ -1,0 +1,15 @@
+---
+
+- name: Kill nmon process
+  hosts: hadoop
+  vars:
+    PROCESS: nmon
+  roles:
+    - kill_process
+
+- name: Run nmon process
+  hosts: hadoop
+  vars:
+    OUT_PATH: "/home/hadoop/perf_share"
+  roles:
+    - run_nmon
