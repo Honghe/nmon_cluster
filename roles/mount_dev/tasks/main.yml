@@ -1,0 +1,11 @@
+---
+
+- name: mount data dev
+  mount:
+    path: /mnt/{{ item }}
+    src: /dev/{{ item }}
+    backup: yes
+    fstype: xfs
+    state: mounted
+  with_items:
+    - "{{ devs }}"

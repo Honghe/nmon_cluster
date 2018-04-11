@@ -1,0 +1,11 @@
+---
+
+- name: mount dev
+  hosts: hadoop
+  vars:
+    devs:
+      - sdb
+      - sdc
+      - sdd
+  roles:
+    - mount_dev

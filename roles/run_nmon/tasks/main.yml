@@ -4,4 +4,4 @@
   shell: "rm -rf {{ OUT_PATH }}/*"
 
 - name: run nmon
-  shell: "nmon -f -m {{ OUT_PATH }} -s 3 -c 100"
+  shell: "nmon -f -m {{ OUT_PATH }} -s 3 -c 300"
