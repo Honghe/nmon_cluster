@@ -6,6 +6,7 @@
     src: /dev/{{ item }}
     backup: yes
     fstype: xfs
+    opts: noatime
     state: mounted
   with_items:
     - "{{ devs }}"
